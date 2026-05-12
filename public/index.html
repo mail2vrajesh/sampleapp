@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>Todos</h1>
+        <p class="tagline">Saved in your browser (localStorage)</p>
+      </header>
+
+      <form class="add-form" id="add-form" autocomplete="off">
+        <label class="sr-only" for="new-todo">New task</label>
+        <input
+          id="new-todo"
+          name="text"
+          type="text"
+          maxlength="500"
+          placeholder="What needs doing?"
+          required
+        />
+        <button type="submit">Add</button>
+      </form>
+
+      <nav class="filters" aria-label="Filter tasks">
+        <button type="button" data-filter="all" class="filter is-active">All</button>
+        <button type="button" data-filter="active" class="filter">Active</button>
+        <button type="button" data-filter="completed" class="filter">Done</button>
+      </nav>
+
+      <ul class="list" id="list" aria-live="polite"></ul>
+
+      <footer class="footer">
+        <span id="count">0 items</span>
+        <button type="button" id="clear-completed" class="link-button" hidden>
+          Clear completed
+        </button>
+      </footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
