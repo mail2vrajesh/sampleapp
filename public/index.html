@@ -10,7 +10,7 @@
     <main class="app">
       <header class="header">
         <h1>Todos</h1>
-        <p class="tagline">Saved in your browser (localStorage)</p>
+        <p class="tagline">Saved in your browser (localStorage) </p>
       </header>
 
       <form class="add-form" id="add-form" autocomplete="off">
@@ -41,6 +41,13 @@
         </button>
       </footer>
     </main>
+
+    <dialog id="duplicate-dialog" class="duplicate-dialog" aria-labelledby="duplicate-dialog-title">
+      <h2 id="duplicate-dialog-title" class="duplicate-dialog-title">Duplicate task</h2>
+      <p class="duplicate-dialog-body">This task is already in your list.</p>
+      <button type="button" id="duplicate-dialog-ok" class="duplicate-dialog-ok" autofocus>OK</button>
+    </dialog>
+
     <script src="app.js"></script>
   </body>
 </html>
